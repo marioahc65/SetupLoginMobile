@@ -1,27 +1,79 @@
-# Compiled class file
-*.class
+### Kotlin / Gradle ###
+.gradle/
+build/
+**/build/
+!**/src/**/build/   # (opcional) por si tienes fixtures raros; si no, bórralo
+.gradle.kts.cache/
+kotlin-js-store/
+local.properties
+gradle-app.setting
+!gradle/wrapper/gradle-wrapper.jar
 
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
-
-# Kotlin Gradle plugin data, see https://kotlinlang.org/docs/whatsnew20.html#new-directory-for-kotlin-data-in-gradle-projects
+### Kotlin (ya tienes .kotlin/) ###
 .kotlin/
+# (opcional) caches viejos:
+# .kotlinc/
+
+### IntelliJ / Android Studio ###
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+### Android ###
+*.apk
+*.aab
+*.dex
+*.class
+bin/
+gen/
+captures/
+.externalNativeBuild/
+.cxx/
+.navigation/
+lint-results*.xml
+lint-results*.html
+lint-reports/
+google-services.json     # solo si NO quieres versionarlo (muchos equipos sí lo versionan)
+
+### iOS / Xcode ###
+iosApp/build/
+Pods/
+Carthage/
+DerivedData/
+*.xcuserstate
+*.xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcworkspace/xcuserdata/
+*.moved-aside
+*.swp
+*.lock
+*~ 
+.DS_Store
+
+### Kotlin/Native ###
+*.konan/
+*.kexe
+*.klib
+*.framework/
+*.dSYM/
+*.dSYM.zip
+*.symbols
+
+### Compose Multiplatform / Skiko ###
+.skiko/
+composeApp/build/
+
+### Node / JS (si tu KMP incluye target JS/Wasm o tooling) ###
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.karma/
+.deno/
+
+### Testing ###
+/**/out/
+test-results/
