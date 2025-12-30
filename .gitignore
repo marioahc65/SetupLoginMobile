@@ -1,27 +1,42 @@
-### Kotlin / Gradle ###
+################################################################################
+# Kotlin / Gradle
+################################################################################
 .gradle/
 build/
 **/build/
-!**/src/**/build/   # (opcional) por si tienes fixtures raros; si no, bórralo
 .gradle.kts.cache/
 kotlin-js-store/
 local.properties
 gradle-app.setting
+
+# Mantener el Gradle Wrapper en git
 !gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
 
-### Kotlin (ya tienes .kotlin/) ###
+################################################################################
+# Kotlin
+################################################################################
 .kotlin/
-# (opcional) caches viejos:
-# .kotlinc/
+*.hprof
 
-### IntelliJ / Android Studio ###
+################################################################################
+# IntelliJ / Android Studio
+################################################################################
 .idea/
 *.iml
 *.ipr
 *.iws
 out/
+# Algunas configs por usuario
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
 
-### Android ###
+################################################################################
+# Android
+################################################################################
 *.apk
 *.aab
 *.dex
@@ -35,24 +50,25 @@ captures/
 lint-results*.xml
 lint-results*.html
 lint-reports/
-google-services.json     # solo si NO quieres versionarlo (muchos equipos sí lo versionan)
 
-### iOS / Xcode ###
-iosApp/build/
-Pods/
-Carthage/
+################################################################################
+# iOS / Xcode / Kotlin Native
+################################################################################
+# Xcode build artifacts
 DerivedData/
 *.xcuserstate
 *.xcuserdata/
-*.xcodeproj/project.xcworkspace/xcuserdata/
 *.xcworkspace/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
 *.moved-aside
 *.swp
-*.lock
-*~ 
+*~
 .DS_Store
 
-### Kotlin/Native ###
+# CocoaPods (solo si los usas)
+Pods/
+
+# Kotlin/Native outputs
 *.konan/
 *.kexe
 *.klib
@@ -61,19 +77,16 @@ DerivedData/
 *.dSYM.zip
 *.symbols
 
-### Compose Multiplatform / Skiko ###
+################################################################################
+# Compose Multiplatform / Skiko
+################################################################################
 .skiko/
-composeApp/build/
+# Algunos proyectos generan esto
+.compose/
 
-### Node / JS (si tu KMP incluye target JS/Wasm o tooling) ###
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-.karma/
-.deno/
-
-### Testing ###
-/**/out/
-test-results/
+################################################################################
+# Logs / misc
+################################################################################
+*.log
+hs_err_pid*
+replay_pid*
